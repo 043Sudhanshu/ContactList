@@ -1,7 +1,8 @@
 const express=require('express');
 const port=8000;
-
 const app=express();
+
+require('./config/mongoose');
 
 app.get('/',function(req,res){
     return res.end('Home');
