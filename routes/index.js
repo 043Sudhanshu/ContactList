@@ -9,5 +9,7 @@ router.post('/Add',controller.AddContact);
 
 router.delete('/Delete',controller.DeleteContact);
 
+router.put('/Update',controller.UpdateContact);
+
 
 module.exports=router;

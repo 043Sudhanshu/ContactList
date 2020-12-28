@@ -6,7 +6,8 @@ const ContactSchema=mongoose.Schema({
     },
     number:{
         type:String,
-        required:true
+        required:true,
+        unique:true
     }
 
 },{timestamps:true});
