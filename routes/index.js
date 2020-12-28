@@ -5,7 +5,9 @@ const contact=require('../models/ContactSchema');
 
 const controller=require('../controllers/main');
 
-router.get('/Add',controller.AddContact);
+router.post('/Add',controller.AddContact);
+
+router.delete('/Delete',controller.DeleteContact);
+
 
 module.exports=router;
-
