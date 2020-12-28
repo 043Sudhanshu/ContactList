@@ -2,9 +2,11 @@ const mongoose=require('mongoose');
 mongoose.connect('mongodb://localhost/Contact');
 const db=mongoose.connection;
 
-db.on('error',console.error.bind(console,"error connecting to db"));
+db.on('error',function(err){
+    console.log(`Database error: ${err}`);
+});
 
-db.once('open',function(){
+db.on('open',function(){
     console.log("server connected to db");
 });
 
